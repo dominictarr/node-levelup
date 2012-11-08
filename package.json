@@ -1,6 +1,7 @@
 {
     "name"            : "levelup"
   , "description"     : "Fast & simple storage - a Node.js-style LevelDB wrapper"
+  , "homepage"        : "https://github.com/rvagg/node-levelup"
   , "authors": [
         "Rod Vagg @rvagg <rod@vagg.org> (https://github.com/rvagg)"
     ]

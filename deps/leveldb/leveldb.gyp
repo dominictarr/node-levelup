@@ -7,6 +7,7 @@
 {
   'target_defaults': {
     'defines': [
+      'LEVELDB_PLATFORM_LIBUV=1',
       'USE_SNAPPY=1',
     ],
     'include_dirs': [
@@ -22,7 +23,6 @@
       ['OS == "linux"', {
         'defines': [
           'OS_LINUX=1',
-      		'LEVELDB_PLATFORM_POSIX=1',
         ],
         'CCFLAGS': [
           '-fno-builtin-memcmp',
@@ -33,7 +33,6 @@
       ['OS == "solaris"', {
         'defines': [
           'OS_SOLARIS=1',
-      		'LEVELDB_PLATFORM_POSIX=1',
         ],
         'CCFLAGS': [
           '-fno-builtin-memcmp',
@@ -44,7 +43,6 @@
       ['OS == "mac"', {
         'defines': [
           'OS_MACOSX=1',
-      		'LEVELDB_PLATFORM_POSIX=1',
         ],
         'CCFLAGS': [
           '-fno-builtin-memcmp',
@@ -117,9 +115,8 @@
         'leveldb-1.5.0/include/leveldb/table_builder.h',
         'leveldb-1.5.0/include/leveldb/write_batch.h',
         'leveldb-1.5.0/port/port.h',
-        'leveldb-1.5.0/port/port_example.h',
-        'leveldb-1.5.0/port/port_posix.cc',
-        'leveldb-1.5.0/port/port_posix.h',
+        'leveldb-1.5.0/port/libuv/port_uv.cc',
+        'leveldb-1.5.0/port/libuv/port_uv.h',
         'leveldb-1.5.0/table/block.cc',
         'leveldb-1.5.0/table/block.h',
         'leveldb-1.5.0/table/block_builder.cc',
